@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "../utilities/cli/cmdmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +25,7 @@ private slots:
     void on_modsTree_itemSelectionChanged();
 
 private:
+    CMDManager *cmd;
     Ui::MainWindow *ui;
 };
 

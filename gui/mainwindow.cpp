@@ -4,6 +4,8 @@
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    cmd = new CMDManager();
+    ui->modsLocation->setText(cmd->getModsFolder().c_str());
 }
 
 MainWindow::~MainWindow() {
@@ -24,3 +26,4 @@ void MainWindow::on_updateButton_clicked() {
 void MainWindow::on_modsTree_itemSelectionChanged() {
 
 }
+

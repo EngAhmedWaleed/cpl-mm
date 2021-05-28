@@ -56,6 +56,9 @@
                 </property>
             </widget>
             <widget class="QPushButton" name="browseButton">
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
                 <property name="geometry">
                     <rect>
                         <x>689</x>
@@ -63,6 +66,9 @@
                         <width>101</width>
                         <height>23</height>
                     </rect>
+                </property>
+                <property name="toolTip">
+                    <string/>
                 </property>
                 <property name="text">
                     <string>Browse</string>
@@ -135,9 +141,17 @@
                         <string>Version</string>
                     </property>
                 </column>
+                <column>
+                    <property name="text">
+                        <string>Status</string>
+                    </property>
+                </column>
                 <item>
                     <property name="text">
                         <string>Better Balanced Game</string>
+                    </property>
+                    <property name="text">
+                        <string/>
                     </property>
                     <property name="text">
                         <string/>
@@ -151,6 +165,9 @@
                         </property>
                         <property name="text">
                             <string>0.0.0</string>
+                        </property>
+                        <property name="text">
+                            <string>install</string>
                         </property>
                     </item>
                     <item>
@@ -168,7 +185,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -177,15 +206,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -199,18 +219,27 @@
                     <property name="text">
                         <string>0.0.0</string>
                     </property>
+                    <property name="text">
+                        <string>install</string>
+                    </property>
                 </item>
                 <item>
                     <property name="text">
-                        <string>Better Spectator Mod </string>
+                        <string>Better Spectator Mod</string>
                     </property>
                     <property name="text">
                         <string>0.0.0</string>
+                    </property>
+                    <property name="text">
+                        <string>install</string>
                     </property>
                 </item>
                 <item>
                     <property name="text">
                         <string>Infixo Better UI Collection</string>
+                    </property>
+                    <property name="text">
+                        <string/>
                     </property>
                     <property name="text">
                         <string/>
@@ -224,7 +253,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -233,15 +274,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -253,7 +285,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -262,15 +306,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -282,7 +317,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -291,15 +338,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -311,7 +349,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -320,15 +370,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -340,7 +381,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -349,15 +402,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -369,7 +413,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -378,15 +434,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -398,7 +445,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -407,15 +466,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -427,7 +477,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -436,15 +498,6 @@
                         </property>
                         <property name="text">
                             <string>not-supported (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -456,7 +509,19 @@
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
-                                <color alpha="100">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string>0.0</string>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
                                     <red>0</red>
                                     <green>0</green>
                                     <blue>0</blue>
@@ -466,15 +531,6 @@
                         <property name="text">
                             <string>not-supported (yet)</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="100">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
@@ -482,10 +538,13 @@
                 </item>
                 <item>
                     <property name="text">
-                        <string>Multiplayer Helper </string>
+                        <string>Multiplayer Helper</string>
                     </property>
                     <property name="text">
                         <string>0.0.0</string>
+                    </property>
+                    <property name="text">
+                        <string>install</string>
                     </property>
                 </item>
             </widget>
