@@ -1,12 +1,12 @@
 #include <iostream>
 #include <QApplication>
-#include <QPushButton>
+#include "gui/mainwindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    QPushButton button("Hello front world!", nullptr);
-    button.resize(200, 100);
-    button.show();
-    std::cout << "Hello back world!" << std::endl;
-    return QApplication::exec();
+    MainWindow w;
+    std::cout << "Hello back end!" << std::endl;
+    w.show();
+    return a.exec();
 }
+
