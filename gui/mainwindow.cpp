@@ -10,20 +10,25 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() {
     delete ui;
+    delete cmd;
 }
 
+void refreshModsTree();
 
 void MainWindow::on_browseButton_clicked() {
-
+    cmd->setModsFolder();
+    ui->modsLocation->setText(cmd->getModsFolder().c_str());
+    refreshModsTree();
 }
-
 
 void MainWindow::on_updateButton_clicked() {
-
+    refreshModsTree();
 }
-
 
 void MainWindow::on_modsTree_itemSelectionChanged() {
 
 }
 
+void refreshModsTree() {
+
+}

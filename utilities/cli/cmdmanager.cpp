@@ -1,10 +1,8 @@
 #include "cmdmanager.h"
 #include <iostream>
+#include "../files/utilities.h"
 //https://stackoverflow.com/a/40230786
 #include <direct.h>
-//https://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring
-#include <fstream>
-#include <streambuf>
 
 #define DIR(launcher)  "cd " + getModFolderPath(launcher) + " && "
 #define TMP_FILE progFolder + "\\output.tmp"
@@ -32,16 +30,32 @@ CMDManager::CMDManager() {
         cout << modsFolder;
 }
 
-string readFile(string path);
-
 string CMDManager::initializeModsFolder(Launcher game_launcher) {
     switch (game_launcher) {
         case STEAM:
         case EPIC_GAMES:
             return readFile(TMP_FILE);
         default:
-            return "";
+            return setModsFolder();
     }
+}
+
+string CMDManager::setModsFolder() {
+    string path;
+    if (modsFolder.empty()) {
+        bool userFound = !system((DIR(NOT_FOUND) + "cd" + PIPE_OUTPUT).c_str());
+        if (!userFound)
+            path = BrowseFolder("", "Please Locate Civilization VI Mods Folder");
+        else
+            path = BrowseFolder(readFile(TMP_FILE), "Please Locate Civilization VI Mods Folder");
+        if (path.empty())
+            path = setModsFolder();
+    } else
+        path = BrowseFolder(modsFolder, "Please Locate Civilization VI Mods Folder");
+
+    if (!path.empty())
+        modsFolder = path;
+    return modsFolder;
 }
 
 string CMDManager::getModsFolder() {
@@ -49,7 +63,7 @@ string CMDManager::getModsFolder() {
 }
 
 void CMDManager::cd(const char *path) {
-    if (0 != _chdir("C:\\")) {
+    if (0 != _chdir(path)) {
         cerr << "Failed to change cwd!" << endl;
         throw new exception();
     }
@@ -65,17 +79,11 @@ string CMDManager::cwd() {
 string getModFolderPath(Launcher mods_folder) {
     switch (mods_folder) {
         case STEAM:
-            return "%userprofile%\"\\Documents\\My Games\\Sid Meier's Civilization VI\\Mods\"";
+            return R"(%userprofile%"\Documents\My Games\Sid Meier's Civilization VI\Mods")";
         case EPIC_GAMES:
-            return "%userprofile%\"\\Documents\\My Games\\Sid Meier's Civilization VI (Epic)\\Mods\"";
+            return R"(%userprofile%"\Documents\My Games\Sid Meier's Civilization VI (Epic)\Mods")";
         default:
-            return "%userprofile%\\Documents";
+            return R"("%userprofile%\Documents")";
     }
 }
 
-string readFile(string path) {
-    std::ifstream stream(path);
-    std::string str((std::istreambuf_iterator<char>(stream)),
-                    std::istreambuf_iterator<char>());
-    return str.substr(0, str.length() - 1);
-}

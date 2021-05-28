@@ -14,9 +14,9 @@ private:
     string progFolder;
     string modsFolder;
 
-    void cd(const char *path);
+    static void cd(const char *path);
 
-    string cwd();
+    static string cwd();
 
     string initializeModsFolder(Launcher game_launcher);
 
@@ -25,7 +25,7 @@ public:
 
     string exec(const string &command);
 
-    bool setModsFolder(string path);
+    string setModsFolder();
 
     string getModsFolder();
 };
