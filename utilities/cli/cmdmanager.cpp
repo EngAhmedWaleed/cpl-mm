@@ -4,57 +4,62 @@
 //https://stackoverflow.com/a/40230786
 #include <direct.h>
 
-#define DIR(launcher)  "cd " + getModFolderPath(launcher) + " && "
-#define TMP_FILE progFolder + "\\output.tmp"
-#define PIPE_OUTPUT  " >" + TMP_FILE
+#define DIR(dir)            "cd " + dir + " && "
+#define MODS_DIR(launcher)  DIR(getModFolderPath(launcher))
+#define TMP_FILE            progFolder + "\\output.tmp"
+#define PIPE_OUTPUT         " >" + TMP_FILE
+
+CMDManager *CMDManager::_singleton = nullptr;
 
 string getModFolderPath(Launcher mods_folder);
 
 CMDManager::CMDManager() {
-
     progFolder = cwd();
     cd("C:\\");
 
     Launcher mf = NOT_FOUND;
-    bool isSteam = !system((DIR(STEAM) + "cd" + PIPE_OUTPUT).c_str());
+    bool isSteam = exec(MODS_DIR(STEAM) + "cd", true);
     if (!isSteam) {
-        bool isEpic = !system((DIR(EPIC_GAMES) + "cd" + PIPE_OUTPUT).c_str());
+        bool isEpic = exec(MODS_DIR(EPIC_GAMES) + "cd", true);
         if (isEpic)
             mf = EPIC_GAMES;
     } else
         mf = STEAM;
 
-    modsFolder = initializeModsFolder(mf);
-
-    if (!modsFolder.empty())
-        cout << modsFolder;
+    modsFolder = cd(initializeModsFolder(mf));
 }
 
-string CMDManager::initializeModsFolder(Launcher game_launcher) {
-    switch (game_launcher) {
-        case STEAM:
-        case EPIC_GAMES:
-            return readFile(TMP_FILE);
-        default:
-            return setModsFolder();
-    }
+CMDManager *CMDManager::getInstance() {
+    if (_singleton == nullptr)
+        _singleton = new CMDManager();
+    return _singleton;
+}
+
+bool CMDManager::exec(string command, bool pipe_result) {
+    return exec(command, "", pipe_result);
+}
+
+bool CMDManager::exec(string command, string dir, bool pipe_result) {
+    return !system(((dir == "" ? dir : DIR(dir)) + command + (pipe_result ? PIPE_OUTPUT : "")).c_str());
+}
+
+string CMDManager::exec_result() {
+    return readFile(TMP_FILE);
 }
 
 string CMDManager::setModsFolder() {
-    string path;
+    string start_path;
     if (modsFolder.empty()) {
-        bool userFound = !system((DIR(NOT_FOUND) + "cd" + PIPE_OUTPUT).c_str());
-        if (!userFound)
-            path = BrowseFolder("", "Please Locate Civilization VI Mods Folder");
-        else
-            path = BrowseFolder(readFile(TMP_FILE), "Please Locate Civilization VI Mods Folder");
-        if (path.empty())
-            path = setModsFolder();
+        bool userFound = exec(MODS_DIR(NOT_FOUND) + "cd", true);
+        start_path = userFound ? exec_result() : "";
     } else
-        path = BrowseFolder(modsFolder, "Please Locate Civilization VI Mods Folder");
+        start_path = modsFolder;
+
+    string path = browseFolder(start_path, "Please Locate Civilization VI Mods Folder", modsFolder.empty());
 
     if (!path.empty())
-        modsFolder = path;
+        modsFolder = cd(path);
+
     return modsFolder;
 }
 
@@ -62,11 +67,24 @@ string CMDManager::getModsFolder() {
     return modsFolder;
 }
 
-void CMDManager::cd(const char *path) {
-    if (0 != _chdir(path)) {
+string CMDManager::initializeModsFolder(Launcher game_launcher) {
+    switch (game_launcher) {
+        case STEAM:
+        case EPIC_GAMES:
+            return exec_result();
+        default:
+            return setModsFolder();
+    }
+}
+
+#define DRIVE_LETTER(path) path.substr(0,3).c_str()
+
+string CMDManager::cd(string path) {
+    if (0 != _chdir(DRIVE_LETTER(path)) || 0 != _chdir(path.c_str())) {
         cerr << "Failed to change cwd!" << endl;
         throw new exception();
     }
+    return path;
 }
 
 string CMDManager::cwd() {

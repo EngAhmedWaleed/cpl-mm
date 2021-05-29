@@ -14,16 +14,31 @@ private:
     string progFolder;
     string modsFolder;
 
-    static void cd(const char *path);
+    // https://refactoring.guru/design-patterns/singleton/cpp/example
+    static CMDManager *_singleton;
+
+    explicit CMDManager();
+
+    static string cd(string path);
 
     static string cwd();
 
     string initializeModsFolder(Launcher game_launcher);
 
 public:
-    explicit CMDManager();
+    // Singletons should not be cloneable.
+    CMDManager(CMDManager &other) = delete;
 
-    string exec(const string &command);
+    // Singletons should not be assignable.
+    void operator=(const CMDManager &) = delete;
+
+    static CMDManager *getInstance();
+
+    bool exec(string command, bool pipe_result = true);
+
+    bool exec(string command, string dir = "", bool pipe_result = true);
+
+    string exec_result();
 
     string setModsFolder();
 

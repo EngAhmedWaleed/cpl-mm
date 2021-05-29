@@ -9,8 +9,10 @@
 #include <fstream>
 #include <streambuf>
 
-std::string BrowseFolder(std::string start_path, std::string title);
+using namespace std;
 
-std::string readFile(std::string path);
+string browseFolder(string start_path, string title, bool rep);
+
+string readFile(string path);
 
 #endif //FOLDERCHOOSER_H

@@ -24,9 +24,13 @@ private slots:
 
     void on_modsTree_itemSelectionChanged();
 
+    void on_updateSelectedButton_clicked();
+
 private:
     CMDManager *cmd;
     Ui::MainWindow *ui;
+
+    vector<string> selectedMods;
 };
 
 #endif // MAINWINDOW_H
