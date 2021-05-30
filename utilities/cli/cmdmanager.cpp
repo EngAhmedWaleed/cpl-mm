@@ -1,10 +1,12 @@
-#include "cmdmanager.h"
 #include <iostream>
-#include "../files.h"
 //https://stackoverflow.com/a/40230786
 #include <direct.h>
 
-#define DIR(dir)            (dir == ""? "" : ("cd " + dir + " && "))
+#include "cmdmanager.h"
+#include "../files.h"
+
+#define SUPPRESSED          " 2> " + " \"" + progFolder + "\\" + "suppressed.tmp\""
+#define DIR(dir)            (dir == ""? "" : ("cd " + dir + SUPPRESSED + " && "))
 #define MODS_DIR(launcher)  DIR(getModFolderPath(launcher))
 
 CMDManager *CMDManager::_singleton = nullptr;
@@ -37,12 +39,15 @@ bool CMDManager::exec(string command, bool pipe_result) {
     return exec(command, "", pipe_result);
 }
 
-#define TMP_FILE            progFolder + "\\output.tmp"
+#define TMP_FILE            (" \""+ progFolder + "\\" + "output.tmp\"")
 #define PIPE_OUTPUT(cond)   (cond ? (" >" + TMP_FILE) : "")
 
 bool CMDManager::exec(string command, string dir, bool pipe_result) {
-    return !system((DIR(dir) + command + PIPE_OUTPUT(pipe_result)).c_str());
+    return !system((DIR(dir) + command + PIPE_OUTPUT(pipe_result) + SUPPRESSED).c_str());
 }
+
+#undef  TMP_FILE
+#define TMP_FILE progFolder + "\\output.tmp"
 
 string CMDManager::exec_result() {
     return readFile(TMP_FILE);
@@ -78,11 +83,11 @@ string CMDManager::initializeModsFolder(Launcher game_launcher) {
     }
 }
 
-#define DRIVE_LETTER(path) path.substr(0,3).c_str()
+#define DRIVE_LETTER(path) path.substr(0, 3).c_str()
 
 string CMDManager::cd(string path) {
     if (0 != _chdir(DRIVE_LETTER(path)) || 0 != _chdir(path.c_str())) {
-        cerr << "Failed to change cwd!" << endl;
+        cerr << "Failed to change cwd! (" << DRIVE_LETTER(path) << ", " << path << ")" << endl;
         throw new exception();
     }
     return path;

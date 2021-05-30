@@ -10,12 +10,16 @@
 #include <streambuf>
 //https://stackoverflow.com/questions/612097/how-can-i-get-the-list-of-files-in-a-directory-using-c-or-c
 #include <vector>
+//https://stackoverflow.com/questions/40838504/how-to-search-a-txt-file-for-regex
+#include <regex>
 
 using namespace std;
 
 string browseFolder(string start_path, string title, bool rep);
 
 string readFile(string path);
+
+string searchFile(string path, string reg);
 
 vector<string> ls(string path, string filter = "*.*");
 

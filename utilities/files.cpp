@@ -10,10 +10,27 @@ string browseFolder(string start_path, string title, bool rep) {
 }
 
 string readFile(string path) {
-    ifstream stream(path);
-    string str((istreambuf_iterator<char>(stream)),
+    ifstream file(path);
+    string str((istreambuf_iterator<char>(file)),
                istreambuf_iterator<char>());
+    file.close();
     return str.substr(0, str.length() - 1);
+}
+
+string searchFile(string path, string reg) {
+    ifstream file(path);
+    string line;
+    if (file.good()) {
+        while (getline(file, line)) {
+            regex r(reg);
+            if (regex_search(line, r)) {
+                file.close();
+                return line;
+            }
+        }
+    }
+    file.close();
+    return "";
 }
 
 vector<string> ls(string folder, string filter) {

@@ -1,4 +1,3 @@
-#include <regex>
 #include "repository.h"
 #include "../files.h"
 #include "../cli/cmdmanager.h"
@@ -16,7 +15,7 @@ string regex_first_match(string str, string regex);
 string Repository::parseVersion() {
     if (!exists()) return "";
 
-    string modinfo = readFile(MOD_PATH + "\\" + MOD_INFO_FILE);
+    string modinfo = searchFile(MOD_PATH + "\\" + MOD_INFO_FILE, "<Version>[0-9]+</Version>");
     string version = regex_first_match(regex_first_match(modinfo, "<Version>[0-9]+</Version>"), "[0-9]+");
 
     version = version[0] + version.substr(version.length() - 2);

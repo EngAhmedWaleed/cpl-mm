@@ -49,7 +49,9 @@ void MainWindow::on_updateSelectedButton_clicked() {
     entry = entry->child(0);
 
 void MainWindow::refreshModsTree() {
+    cout << "Retrieving mod data";
     for (auto mod : modsMap) {
+        cout << " .";
         string version = mod.second->parseVersion();
         auto modEntry = ui->modsTree->findItems(toQString(mod.first), Qt::MatchExactly, 0)[0];
 
@@ -64,4 +66,5 @@ void MainWindow::refreshModsTree() {
             modEntry->setText(2, toQString("up to date"));
         }
     }
+    cout << " Done" << endl;
 }
