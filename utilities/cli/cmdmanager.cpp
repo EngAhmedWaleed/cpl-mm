@@ -1,13 +1,11 @@
 #include "cmdmanager.h"
 #include <iostream>
-#include "../files/utilities.h"
+#include "../files.h"
 //https://stackoverflow.com/a/40230786
 #include <direct.h>
 
-#define DIR(dir)            "cd " + dir + " && "
+#define DIR(dir)            (dir == ""? "" : ("cd " + dir + " && "))
 #define MODS_DIR(launcher)  DIR(getModFolderPath(launcher))
-#define TMP_FILE            progFolder + "\\output.tmp"
-#define PIPE_OUTPUT         " >" + TMP_FILE
 
 CMDManager *CMDManager::_singleton = nullptr;
 
@@ -39,8 +37,11 @@ bool CMDManager::exec(string command, bool pipe_result) {
     return exec(command, "", pipe_result);
 }
 
+#define TMP_FILE            progFolder + "\\output.tmp"
+#define PIPE_OUTPUT(cond)   (cond ? (" >" + TMP_FILE) : "")
+
 bool CMDManager::exec(string command, string dir, bool pipe_result) {
-    return !system(((dir == "" ? dir : DIR(dir)) + command + (pipe_result ? PIPE_OUTPUT : "")).c_str());
+    return !system((DIR(dir) + command + PIPE_OUTPUT(pipe_result)).c_str());
 }
 
 string CMDManager::exec_result() {
@@ -104,4 +105,3 @@ string getModFolderPath(Launcher mods_folder) {
             return R"("%userprofile%\Documents")";
     }
 }
-

@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <unordered_map>
 #include "../utilities/cli/cmdmanager.h"
+#include "../utilities/git/repository.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,7 +14,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(unordered_map<string, Repository *> map, QWidget *parent = nullptr);
 
     ~MainWindow() override;
 
@@ -31,6 +33,9 @@ private:
     Ui::MainWindow *ui;
 
     vector<string> selectedMods;
+    unordered_map<string, Repository *> modsMap;
+
+    void refreshModsTree();
 };
 
 #endif // MAINWINDOW_H

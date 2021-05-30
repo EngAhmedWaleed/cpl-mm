@@ -23,7 +23,7 @@
             </size>
         </property>
         <property name="windowTitle">
-            <string>CPL Mod Manager</string>
+            <string>Mod Manager</string>
         </property>
         <widget class="QWidget" name="centralwidget">
             <widget class="QLabel" name="label">
@@ -164,15 +164,18 @@
                             <string>BBG (Stable)</string>
                         </property>
                         <property name="text">
-                            <string>0.0.0</string>
+                            <string/>
                         </property>
                         <property name="text">
-                            <string>install</string>
+                            <string/>
                         </property>
                     </item>
                     <item>
                         <property name="text">
                             <string>BBG (BETA)</string>
+                        </property>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="background">
                             <brush brushstyle="NoBrush">
@@ -193,7 +196,7 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>0.0.0</string>
+                            <string/>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -205,7 +208,7 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -217,10 +220,10 @@
                         <string>Better Balanced Starts</string>
                     </property>
                     <property name="text">
-                        <string>0.0.0</string>
+                        <string/>
                     </property>
                     <property name="text">
-                        <string>install</string>
+                        <string/>
                     </property>
                 </item>
                 <item>
@@ -228,15 +231,18 @@
                         <string>Better Spectator Mod</string>
                     </property>
                     <property name="text">
-                        <string>0.0.0</string>
+                        <string/>
                     </property>
                     <property name="text">
-                        <string>install</string>
+                        <string/>
                     </property>
                 </item>
                 <item>
                     <property name="text">
                         <string>Infixo Better UI Collection</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>not-support (yet)</string>
                     </property>
                     <property name="text">
                         <string/>
@@ -251,17 +257,8 @@
                         <property name="text">
                             <string>Better City States</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -273,7 +270,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -283,17 +292,8 @@
                         <property name="text">
                             <string>Better Civilopedia</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -305,7 +305,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -315,17 +327,8 @@
                         <property name="text">
                             <string>Better Climate Screen</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -337,7 +340,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -347,17 +362,8 @@
                         <property name="text">
                             <string>Better Leader Icon</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -369,7 +375,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -379,17 +397,8 @@
                         <property name="text">
                             <string>Better Loading Screen</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -401,7 +410,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -411,17 +432,8 @@
                         <property name="text">
                             <string>Better Religion Window</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -433,7 +445,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -443,17 +467,8 @@
                         <property name="text">
                             <string>Better Report Screen</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -465,7 +480,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -475,17 +502,8 @@
                         <property name="text">
                             <string>Better Tech Tree</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -497,7 +515,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -507,17 +537,8 @@
                         <property name="text">
                             <string>Better World Rankings</string>
                         </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string>0.0</string>
+                        <property name="toolTip">
+                            <string>not-support (yet)</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -529,7 +550,19 @@
                             </brush>
                         </property>
                         <property name="text">
-                            <string>not-supported (yet)</string>
+                            <string/>
+                        </property>
+                        <property name="foreground">
+                            <brush brushstyle="NoBrush">
+                                <color alpha="255">
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </brush>
+                        </property>
+                        <property name="text">
+                            <string/>
                         </property>
                         <property name="flags">
                             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -538,13 +571,30 @@
                 </item>
                 <item>
                     <property name="text">
+                        <string>MoreLenses</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>not-support (yet)</string>
+                    </property>
+                    <property name="text">
+                        <string/>
+                    </property>
+                    <property name="text">
+                        <string/>
+                    </property>
+                    <property name="flags">
+                        <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
                         <string>Multiplayer Helper</string>
                     </property>
                     <property name="text">
-                        <string>0.0.0</string>
+                        <string/>
                     </property>
                     <property name="text">
-                        <string>install</string>
+                        <string/>
                     </property>
                 </item>
             </widget>
@@ -559,6 +609,9 @@
                         <width>101</width>
                         <height>23</height>
                     </rect>
+                </property>
+                <property name="toolTip">
+                    <string>not-support (yet)</string>
                 </property>
                 <property name="text">
                     <string>Update Installed</string>
