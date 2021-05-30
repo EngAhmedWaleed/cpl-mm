@@ -1,10 +1,18 @@
-#include "repository.h"
+#include <iostream>
 #include "../files.h"
+#include "repository.h"
 #include "../cli/cmdmanager.h"
 
 Repository::Repository(string name, string origin) {
     this->name = name;
     this->origin = origin;
+}
+
+string Repository::getDirName() {
+    auto first_separator = name.find("\\");
+    if (first_separator == std::string::npos)
+        return name;
+    return name.substr(0, first_separator);
 }
 
 #define MOD_PATH        CMDManager::getInstance()->getModsFolder() + "\\" + name
@@ -31,6 +39,19 @@ bool Repository::upToDate() {
             //https://stackoverflow.com/questions/2340281/check-if-a-string-contains-a-string-in-c
             return CMDManager::getInstance()->exec_result().find("up to date") != std::string::npos;
     return false;
+}
+
+void Repository::update(bool install_if_missing) {
+    if (!exists()) {
+        if (install_if_missing) {
+            std::cout << "Installing " + getDirName() + " . . . .";
+            CMDManager::getInstance()->exec("git clone " + origin + " \"" + getDirName() + '\"', false);
+            std::cout << " Done" << std::endl;
+        }
+        return;
+    }
+    exec("git pull origin master", false);
+    exec("git checkout master");
 }
 
 bool Repository::exists() {

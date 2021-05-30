@@ -1,9 +1,8 @@
 #include <iostream>
+#include "../files.h"
+#include "cmdmanager.h"
 //https://stackoverflow.com/a/40230786
 #include <direct.h>
-
-#include "cmdmanager.h"
-#include "../files.h"
 
 #define SUPPRESSED          " 2> " + " \"" + progFolder + "\\" + "suppressed.tmp\""
 #define DIR(dir)            (dir == ""? "" : ("cd " + dir + SUPPRESSED + " && "))

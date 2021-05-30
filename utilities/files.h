@@ -2,9 +2,9 @@
 #define FOLDERCHOOSER_H
 
 //https://stackoverflow.com/questions/12034943/win32-select-directory-dialog-from-c-c
-#include <windows.h>
 #include <string>
 #include <shlobj.h>
+#include <windows.h>
 //https://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring
 #include <fstream>
 #include <streambuf>

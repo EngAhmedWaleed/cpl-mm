@@ -24,9 +24,9 @@ private slots:
 
     void on_updateButton_clicked();
 
-    void on_modsTree_itemSelectionChanged();
-
     void on_updateSelectedButton_clicked();
+
+    void on_modsTree_itemSelectionChanged();
 
 private:
     CMDManager *cmd;
