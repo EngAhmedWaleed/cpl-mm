@@ -7,19 +7,19 @@
                 <x>0</x>
                 <y>0</y>
                 <width>800</width>
-                <height>400</height>
+                <height>450</height>
             </rect>
         </property>
         <property name="minimumSize">
             <size>
                 <width>800</width>
-                <height>400</height>
+                <height>450</height>
             </size>
         </property>
         <property name="maximumSize">
             <size>
                 <width>800</width>
-                <height>400</height>
+                <height>450</height>
             </size>
         </property>
         <property name="windowTitle">
@@ -80,7 +80,7 @@
                         <x>20</x>
                         <y>60</y>
                         <width>650</width>
-                        <height>320</height>
+                        <height>370</height>
                     </rect>
                 </property>
                 <property name="alternatingRowColors">
@@ -148,7 +148,45 @@
                 </column>
                 <item>
                     <property name="text">
+                        <string>Astog Better UI</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>Quality of life UI collection.</string>
+                    </property>
+                    <property name="flags">
+                        <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                    </property>
+                    <item>
+                        <property name="text">
+                            <string>Better Espionage Screen</string>
+                        </property>
+                        <property name="toolTip">
+                            <string>Improves the espionage screen. Adds filters, side screens, etc.</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Better Trade Screen</string>
+                        </property>
+                        <property name="toolTip">
+                            <string>Adds sort options, filters and generally improves the trade screen.</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>More Lenses</string>
+                        </property>
+                        <property name="toolTip">
+                            <string>Adds many new lenses to the game for builder, resource, city overlap, etc.</string>
+                        </property>
+                    </item>
+                </item>
+                <item>
+                    <property name="text">
                         <string>Better Balanced Game</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>Mod to balance multiplayer game.</string>
                     </property>
                     <property name="text">
                         <string/>
@@ -161,6 +199,9 @@
                     <property name="text">
                         <string>Better Balanced Starts</string>
                     </property>
+                    <property name="toolTip">
+                        <string>Balanced spawn placement for tournaments.</string>
+                    </property>
                     <property name="text">
                         <string/>
                     </property>
@@ -172,6 +213,9 @@
                     <property name="text">
                         <string>Better Spectator Mod</string>
                     </property>
+                    <property name="toolTip">
+                        <string>A better spectator mod...</string>
+                    </property>
                     <property name="text">
                         <string/>
                     </property>
@@ -181,10 +225,18 @@
                 </item>
                 <item>
                     <property name="text">
+                        <string>Extended Policy Cards</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>Extends the Policy Cards to display all the relevant effects of selecting each.</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
                         <string>Infixo Better UI Collection</string>
                     </property>
                     <property name="toolTip">
-                        <string>not-support (yet)</string>
+                        <string>Quality of life UI collection.</string>
                     </property>
                     <property name="text">
                         <string/>
@@ -200,7 +252,7 @@
                             <string>Better City States</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Enhanced City States screen.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -225,9 +277,6 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                     <item>
@@ -235,34 +284,7 @@
                             <string>Better Civilopedia</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string/>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                            <string>More information in Civilopedia.</string>
                         </property>
                     </item>
                     <item>
@@ -270,34 +292,7 @@
                             <string>Better Climate Screen</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string/>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                            <string>More information about CO2 footprint.</string>
                         </property>
                     </item>
                     <item>
@@ -305,7 +300,7 @@
                             <string>Better Leader Icon</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Leader Icon with extended tooltips and relationship info.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -330,9 +325,6 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                     <item>
@@ -340,7 +332,7 @@
                             <string>Better Loading Screen</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Displays detailed information about uniques.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -354,6 +346,9 @@
                         <property name="text">
                             <string/>
                         </property>
+                        <property name="toolTip">
+                            <string/>
+                        </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
                                 <color alpha="255">
@@ -365,9 +360,6 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                     <item>
@@ -375,7 +367,7 @@
                             <string>Better Religion Window</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Enhanced Religion Window.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -400,9 +392,6 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                     <item>
@@ -410,7 +399,7 @@
                             <string>Better Report Screen</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Adds Policies and City States impact, Units, Deals and many improvements.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -435,9 +424,6 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                     <item>
@@ -445,7 +431,7 @@
                             <string>Better Tech Tree</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
+                            <string>Shows more info in Tech and Civics Trees.</string>
                         </property>
                         <property name="foreground">
                             <brush brushstyle="NoBrush">
@@ -458,40 +444,8 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
-                            <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-                        </property>
-                    </item>
-                    <item>
-                        <property name="text">
-                            <string>Better World Rankings</string>
                         </property>
                         <property name="toolTip">
-                            <string>not-support (yet)</string>
-                        </property>
-                        <property name="foreground">
-                            <brush brushstyle="NoBrush">
-                                <color alpha="255">
-                                    <red>0</red>
-                                    <green>0</green>
-                                    <blue>0</blue>
-                                </color>
-                            </brush>
-                        </property>
-                        <property name="text">
                             <string/>
                         </property>
                         <property name="foreground">
@@ -505,38 +459,37 @@
                         </property>
                         <property name="text">
                             <string/>
-                        </property>
-                        <property name="flags">
-                            <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                     </item>
                 </item>
                 <item>
                     <property name="text">
-                        <string>MoreLenses</string>
+                        <string>Mitchs Quick Start</string>
                     </property>
                     <property name="toolTip">
-                        <string>not-support (yet)</string>
-                    </property>
-                    <property name="text">
-                        <string/>
-                    </property>
-                    <property name="text">
-                        <string/>
-                    </property>
-                    <property name="flags">
-                        <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                        <string>Start with more settlers, builders and scouts.</string>
                     </property>
                 </item>
                 <item>
                     <property name="text">
                         <string>Multiplayer Helper</string>
                     </property>
+                    <property name="toolTip">
+                        <string>Esport oriented mod to help tournament and game statibility.</string>
+                    </property>
                     <property name="text">
                         <string/>
                     </property>
                     <property name="text">
                         <string/>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>Odin Quick Start</string>
+                    </property>
+                    <property name="toolTip">
+                        <string>This mod takes you straight to the main menu. (Skips intro logos)</string>
                     </property>
                 </item>
             </widget>
@@ -547,7 +500,7 @@
                 <property name="geometry">
                     <rect>
                         <x>689</x>
-                        <y>357</y>
+                        <y>407</y>
                         <width>101</width>
                         <height>23</height>
                     </rect>
@@ -566,7 +519,7 @@
                 <property name="geometry">
                     <rect>
                         <x>689</x>
-                        <y>327</y>
+                        <y>377</y>
                         <width>101</width>
                         <height>23</height>
                     </rect>

@@ -14,9 +14,9 @@ set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
 
 add_executable(${PROJECT_NAME} main.cpp
         gui/mainwindow.cpp gui/mainwindow.h gui/mainwindow.ui
-        utilities/cli/cmdmanager.cpp utilities/cli/cmdmanager.h
-        utilities/git/repository.cpp utilities/git/repository.h
-        utilities/files.cpp utilities/files.h)
+        utils/cli/cmdmanager.cpp utils/cli/cmdmanager.h
+        utils/git/repository.cpp utils/git/repository.h
+        utils/files.cpp utils/files.h)
 
 if (NOT CMAKE_PREFIX_PATH)
     message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it "

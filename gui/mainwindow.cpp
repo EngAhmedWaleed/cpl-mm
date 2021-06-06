@@ -24,13 +24,15 @@ void MainWindow::on_browseButton_clicked() {
 
 void MainWindow::on_updateButton_clicked() {
     for (auto mod : modsMap)
-        mod.second->update(false);
+        if (mod.second)
+            mod.second->update(false);
     refreshModsTree();
 }
 
 void MainWindow::on_updateSelectedButton_clicked() {
     for (string selected_mod : selectedMods)
-        modsMap[selected_mod]->update(true);
+        if (modsMap[selected_mod])
+            modsMap[selected_mod]->update(true);
     refreshModsTree();
 }
 
@@ -51,6 +53,10 @@ void MainWindow::on_modsTree_itemSelectionChanged() {
 void MainWindow::refreshModsTree() {
     cout << "Retrieving mod data";
     for (auto mod : modsMap) {
+
+        // Ignore unsupported mods
+        if (!mod.second) continue;
+
         cout << " .";
         string version = mod.second->parseVersion();
         auto modEntry = ui->modsTree->findItems(toQString(mod.first), Qt::MatchExactly, 0)[0];

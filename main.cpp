@@ -7,13 +7,13 @@ unordered_map<string, Repository *> modsMap;
 void initializeMods();
 
 int main(int argc, char *argv[]) {
-    /// TODO
+
     if (!CMDManager::getInstance()->exec("git --version", false)) {
         cout << "Couldn't find git, please install: https://git-scm.com/downloads\n" << endl;
         system("pause");
         return 0;
     }
-    /// TODO
+
     initializeMods();
 
     QApplication app(argc, argv);
@@ -30,4 +30,11 @@ void initializeMods() {
                                                      "https://github.com/d-jackthenarrator/Civ6-BSM");
     modsMap["Multiplayer Helper"] = new Repository("MPH\\2357532056",
                                                    "https://github.com/d-jackthenarrator/Civ6-MPH");
+    /**
+     * NOTES:
+     * Extended Policy Cards depends on BRS.
+     * Infixo mods are all in one repo = one parent folder
+     * Make Astog with a shared parent folder as well
+     * EPC, MiQS and OQS will be uploaded to custom git repos.
+     */
 }

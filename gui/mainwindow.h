@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <unordered_map>
-#include "../utilities/cli/cmdmanager.h"
-#include "../utilities/git/repository.h"
+#include "../utils/cli/cmdmanager.h"
+#include "../utils/git/repository.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

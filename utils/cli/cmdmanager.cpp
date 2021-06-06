@@ -57,6 +57,7 @@ string CMDManager::setModsFolder() {
     if (modsFolder.empty()) {
         bool userFound = exec(MODS_DIR(NOT_FOUND) + "cd", true);
         start_path = userFound ? exec_result() : "";
+        cout << "Couldn't find Civilization VI mods folder, please locate it."  << endl;
     } else
         start_path = modsFolder;
 
